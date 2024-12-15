@@ -3,16 +3,19 @@ import { CacheModule } from '@nestjs/cache-manager';
 import {
   AppEnv
 } from './common/enum/env'
-import { APP_INTERCEPTOR } from '@nestjs/core';
 import { MailingModule } from './modules/mailing/mailing.module';
 import {
-  PrismaModule 
-} from './prisma/prisma.module'
+  PrismaModule
+} from './prisma/prisma.module';
+import {
+  queueConfig
+} from './common/queue/queue.config'
 
 @Module({
   imports: [
     MailingModule,
     PrismaModule,
+    queueConfig,
     CacheModule.register({
       isGlobal: true,
       host: AppEnv.REDIS_HOST,
