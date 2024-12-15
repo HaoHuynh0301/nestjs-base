@@ -9,7 +9,7 @@ export class MailingController {
 	@Get()
 	async sendOne() {
 		await this.mailingService.send({
-			to: 'haohuynh@fuixlabs.com',
+			to: 'theanh21032304@gmail.com',
 			subject: 'Test email',
 			text: 'This is a test email',
 			html: '<b>This is a test email</b>',

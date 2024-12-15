@@ -1,5 +1,7 @@
 import * as dotenv from 'dotenv';
 
+dotenv.config();
+
 interface Env {
 	// DATABASE_CONNECT: string;
 	// DATABASE_PORT: number;
