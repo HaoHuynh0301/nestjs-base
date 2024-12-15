@@ -3,7 +3,7 @@ import amqp, { ChannelWrapper } from 'amqp-connection-manager';
 import { Channel } from 'amqplib';
 import {
     Queue
-} from '../../../common/enum/channel'
+} from '../../common/enum/channel'
 
 export class ProducerService {
     private channelWrapper: ChannelWrapper;
