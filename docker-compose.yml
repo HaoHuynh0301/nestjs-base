@@ -1,23 +1,23 @@
 version: '3.3'
 services:
-    # adminer:
-    #     image: adminer:latest
-    #     ports:
-    #         - 9081:8080
-    #     networks:
-    #         - auth0nestjs
-    # postgres:
-    #     image: postgres:12
-    #     volumes:
-    #         - data-volume:/data/db
-    #     ports:
-    #         - ${DATABASE_PORT}:5432
-    #     environment:
-    #         POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
-    #         POSTGRES_USER: ${DATABASE_USER}
-    #         POSTGRES_DB: ${DATABASE_NAME}
-    #     networks:
-    #         - auth0nestjs
+    adminer:
+        image: adminer:latest
+        ports:
+            - 9081:8080
+        networks:
+            - auth0nestjs
+    postgres:
+        image: postgres:12
+        volumes:
+            - data-volume:/data/db
+        ports:
+            - ${DATABASE_PORT}:5432
+        environment:
+            POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+            POSTGRES_USER: ${DATABASE_USER}
+            POSTGRES_DB: ${DATABASE_NAME}
+        networks:
+            - auth0nestjs
     redis:
         image: redis:latest
         volumes:

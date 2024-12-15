@@ -5,10 +5,14 @@ import {
 } from './common/enum/env'
 import { APP_INTERCEPTOR } from '@nestjs/core';
 import { MailingModule } from './modules/mailing/mailing.module';
+import {
+  PrismaModule 
+} from './prisma/prisma.module'
 
 @Module({
   imports: [
     MailingModule,
+    PrismaModule,
     CacheModule.register({
       isGlobal: true,
       host: AppEnv.REDIS_HOST,
